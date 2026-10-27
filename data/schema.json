@@ -1,0 +1,245 @@
+{
+ "products": {
+  "fields": [
+   {
+    "name": "product_id",
+    "type": "string",
+    "description": "Primark product ID of this colour (12 digits: 9-digit style code + 3-digit colour code). The same ID is the same product in every country."
+   },
+   {
+    "name": "style_code",
+    "type": "string",
+    "description": "Style code shared by all colours of a product."
+   },
+   {
+    "name": "colour_code",
+    "type": "string",
+    "description": "Colour code within the style."
+   },
+   {
+    "name": "title",
+    "type": "string",
+    "description": "Product title as shown to shoppers, in the storefront's language."
+   },
+   {
+    "name": "description",
+    "type": "string",
+    "description": "Short product description, in the storefront's language."
+   },
+   {
+    "name": "product_url",
+    "type": "string",
+    "description": "Product page on the country's Primark website."
+   },
+   {
+    "name": "country",
+    "type": "string",
+    "description": "ISO country code of the storefront."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "description": "Storefront locale (language-country), e.g. en-gb, fr-be, nl-be."
+   },
+   {
+    "name": "language",
+    "type": "string",
+    "description": "Language of title, description and category names."
+   },
+   {
+    "name": "currency",
+    "type": "string",
+    "description": "ISO currency of the prices."
+   },
+   {
+    "name": "price",
+    "type": "number",
+    "description": "Current selling price in local currency, as shown to shoppers."
+   },
+   {
+    "name": "original_price",
+    "type": "number",
+    "description": "Previous (crossed-out) price when the product is reduced; empty otherwise."
+   },
+   {
+    "name": "discount_pct",
+    "type": "number",
+    "description": "1 - price / original_price, rounded to 4 decimals; 0 when not reduced."
+   },
+   {
+    "name": "clearance",
+    "type": "boolean",
+    "description": "True when the product is marked as clearance."
+   },
+   {
+    "name": "top_category",
+    "type": "string",
+    "description": "Top-level category, e.g. Women, Kids, Home, Beauty."
+   },
+   {
+    "name": "category",
+    "type": "string",
+    "description": "Leaf category, e.g. Jeans."
+   },
+   {
+    "name": "category_path",
+    "type": "string",
+    "description": "Main category path from top level to leaf, separated by ' > '."
+   },
+   {
+    "name": "category_paths",
+    "type": "list of strings",
+    "description": "Every category path the product is listed under (in CSV: separated by '|')."
+   },
+   {
+    "name": "gender",
+    "type": "string",
+    "description": "Department: Womens, Mens, Girls, Boys, Unisex (empty for home and some beauty)."
+   },
+   {
+    "name": "product_type",
+    "type": "string",
+    "description": "Product type, e.g. Hair Accessories, Pyjama Sets."
+   },
+   {
+    "name": "colour",
+    "type": "string",
+    "description": "Colour name."
+   },
+   {
+    "name": "colour_count",
+    "type": "integer",
+    "description": "Number of colours the style comes in."
+   },
+   {
+    "name": "sizes",
+    "type": "list of strings",
+    "description": "Sizes offered (in CSV: separated by '|')."
+   },
+   {
+    "name": "size_count",
+    "type": "integer",
+    "description": "Number of sizes offered."
+   },
+   {
+    "name": "materials",
+    "type": "list of strings",
+    "description": "Materials, without percentages (in CSV: separated by '|')."
+   },
+   {
+    "name": "care",
+    "type": "list of strings",
+    "description": "Care instructions (in CSV: separated by '|')."
+   },
+   {
+    "name": "availability",
+    "type": "string",
+    "description": "How it can be bought: click_collect_and_store, store_only, click_collect_only or coming_soon."
+   },
+   {
+    "name": "click_collect_stock",
+    "type": "integer",
+    "description": "Units available for Click & Collect, all sizes together."
+   },
+   {
+    "name": "store_count",
+    "type": "integer",
+    "description": "Number of stores that range at least one size of the product."
+   },
+   {
+    "name": "image_url",
+    "type": "string",
+    "description": "Main product image URL."
+   },
+   {
+    "name": "image_urls",
+    "type": "list of strings",
+    "description": "All product image URLs, high resolution (in CSV: separated by '|')."
+   },
+   {
+    "name": "image_count",
+    "type": "integer",
+    "description": "Number of product images."
+   },
+   {
+    "name": "first_listed",
+    "type": "date",
+    "description": "Date the product went on sale in this country; empty when not known."
+   },
+   {
+    "name": "collected_at",
+    "type": "timestamp",
+    "description": "When this record was collected (UTC)."
+   }
+  ]
+ },
+ "sizes": {
+  "fields": [
+   {
+    "name": "product_id",
+    "type": "string",
+    "description": "Primark product ID of the colour (joins to the products file)."
+   },
+   {
+    "name": "sku",
+    "type": "string",
+    "description": "Primark SKU of this size."
+   },
+   {
+    "name": "country",
+    "type": "string",
+    "description": "ISO country code of the storefront."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "description": "Storefront locale."
+   },
+   {
+    "name": "size",
+    "type": "string",
+    "description": "Size label as shown, e.g. 'uk 10', 'one size'."
+   },
+   {
+    "name": "currency",
+    "type": "string",
+    "description": "ISO currency of the prices."
+   },
+   {
+    "name": "price",
+    "type": "number",
+    "description": "Current selling price of this size."
+   },
+   {
+    "name": "original_price",
+    "type": "number",
+    "description": "Previous (crossed-out) price when reduced; empty otherwise."
+   },
+   {
+    "name": "click_collect_stock",
+    "type": "integer",
+    "description": "Units of this size available for Click & Collect."
+   },
+   {
+    "name": "active",
+    "type": "boolean",
+    "description": "False when the size is no longer sold."
+   },
+   {
+    "name": "availability",
+    "type": "string",
+    "description": "click_collect_and_store, store_only, click_collect_only or coming_soon."
+   },
+   {
+    "name": "store_count",
+    "type": "integer",
+    "description": "Number of stores that range this size."
+   },
+   {
+    "name": "collected_at",
+    "type": "timestamp",
+    "description": "When this record was collected (UTC)."
+   }
+  ]
+ }
+}

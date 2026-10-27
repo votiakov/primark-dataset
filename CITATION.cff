@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Primark Product Data in 17 Countries: Free Sample (1,000 products, 2026-10)"
+abstract: "1,000 random products from Primark's UK range with their listings in every country that sells them (9,391 product rows, 48,968 size rows), snapshot of 2026-10-27: local prices and previous prices, categories, colours, sizes, materials, care, Click & Collect stock, store ranging counts, image URLs and on-sale dates."
+authors:
+  - family-names: Votiakov
+    given-names: Andrii
+date-released: 2026-10-27
+version: "2026.10"
+url: "https://cartpie.com/datasets/primark"
+repository-code: "https://github.com/votiakov/primark-dataset"
+license-url: "https://github.com/votiakov/primark-dataset#terms"
+keywords:
+  - Primark
+  - e-commerce
+  - fashion retail
+  - retail prices
+  - cross-country price comparison
+  - product data
